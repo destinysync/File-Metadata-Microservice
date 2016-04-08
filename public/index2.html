@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>File Metadata Microservice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        .content {
+            margin-top: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div>
+            <h1>File Metadata Microservice</h1>
+            <h3>User Story: I can submit a FormData object that includes a file upload.</h3>
+            <h3>User Story: When I submit something, I will receive the file size in bytes within the JSON response</h3>
+        </div>
+        <br>
+        <form id        =  "uploadForm"
+              enctype   =  "multipart/form-data"
+              action    =  "/"
+              method    =  "post"
+        >
+            <input type="file" name="file" />
+            <input type="submit" value="Submit" name="submit">
+        </form>
+    </div>
+</div>
+
+<script>
+    function myFunction() {
+        alert('File Size: ' + req.file['size'].toString() + " bytes");
+    }
+</script>
+</body>
+</html>
